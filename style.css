@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 20px auto;
+  line-height: 1.4;
+}
+
+textarea, input, button {
+  width: 100%;
+  margin: 6px 0;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+#log {
+  background: #111;
+  color: #0f0;
+  padding: 10px;
+  height: 220px;
+  overflow-y: auto;
+  font-size: 12px;
+  white-space: pre-wrap;
+}
