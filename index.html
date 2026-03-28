@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>BET Sweeper</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.min.js"></script>
+</head>
+<body>
+  <h1>BET Sweeper</h1>
+
+  <button id="connectButton">Připojit Rabby / peněženku</button>
+  <div id="currentAccount"></div>
+  <div id="networkInfo"></div>
+
+  <hr>
+
+  <section>
+    <h2>Nastavení – approve / revoke</h2>
+
+    <label>Adresa BET tokenu:</label>
+    <input type="text" id="tokenAddress" placeholder="0x...">
+
+    <label>Adresa sweeper kontraktu:</label>
+    <input type="text" id="sweeperAddress" placeholder="0x...">
+
+    <button id="loadTokenInfoButton">Načíst info o tokenu</button>
+    <div id="tokenInfo"></div>
+
+    <button id="approveButton">Povolit práci s BET (approve)</button>
+    <button id="revokeButton">Odvolat povolení (revoke)</button>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Hromadný sweep (vybrat všechny BET z adres)</h2>
+
+    <label>Seznam adres (každá na novém řádku):</label>
+    <textarea id="walletsSweep" rows="8" cols="60"></textarea>
+
+    <label>Cílová adresa:</label>
+    <input type="text" id="targetAddress" placeholder="0x...">
+
+    <button id="sweepButton">Vybrat všechny BET (1 podpis)</button>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Hromadná distribuce (z jedné adresy na více)</h2>
+
+    <label>Seznam adres:</label>
+    <textarea id="walletsDistribute" rows="8" cols="60"></textarea>
+
+    <label>Částka BET na jednu adresu (např. 10.5):</label>
+    <input type="text" id="amountPerWallet" placeholder="10">
+
+    <button id="distributeButton">Rozeslat BET (1 podpis)</button>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Log</h2>
+    <pre id="log"></pre>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
